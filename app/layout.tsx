@@ -4,6 +4,7 @@ import "./globals.css";
 import React from "react";
 import {Toaster} from "@/components/ui/toaster";
 import {Provider} from "@/components/Provider";
+import NavBar from "@/components/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,9 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
       <Provider>
-          <main className='h-screen flex flex-col justify-center items-center'>
-                  {children}
-          </main>
+          {children}
           <Toaster />
       </Provider>
       </body>

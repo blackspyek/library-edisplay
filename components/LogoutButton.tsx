@@ -13,7 +13,7 @@ const LogoutButton = () => {
                     callbackUrl: `${window.location.origin}/login`,
                 }
             )}
-            variant='destructive'
+            variant='default'
 
         >Wyloguj</Button>
 
