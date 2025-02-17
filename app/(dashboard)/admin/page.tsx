@@ -9,7 +9,7 @@ import NavBar from "@/components/NavBar";
 import Aside from "@/components/Aside";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
-import DisplayCards from "@/components/DisplayCards";
+import DisplayExhibitionCards from "@/components/DisplayCards";
 
 const Page = async () => {
     const session = await getServerSession(authOptions);
@@ -21,13 +21,9 @@ const Page = async () => {
 
 
     return (
-        <div className="h-screen">
-            <NavBar />
-            <div className="flex h-5/6">
-                <Aside />
-                <DisplayCards />
-            </div>
-        </div>
+    <>
+        <DisplayExhibitionCards/>
+    </>
     );
 };
 export default Page

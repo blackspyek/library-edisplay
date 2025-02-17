@@ -10,6 +10,7 @@ import {
     AlertDialogTitle
 } from "@/components/ui/alert-dialog";
 import {Input} from "@/components/ui/input";
+import NewButton from "@/components/NewButton";
 interface CreateExhibitionData {
     title: string;
 }
@@ -48,14 +49,10 @@ const NewExpositionModal = () => {
     };
     return (
     <>
-    <Button
-        className="fixed bottom-10 right-10 border border-black font-bold hover:bg-black hover:text-white"
-        variant="secondary"
-        onClick={() => setIsCreateDialogOpen(true)}
-    >
-        Stwórz
-        <PlusIcon className="w-6 h-6 ml-2"/>
-    </Button>
+        <NewButton setIsCreateDialogOpen={
+            setIsCreateDialogOpen
+        } label={"Stwórz"}/>
+
         <AlertDialog open={isCreateDialogOpen} onOpenChange={setIsCreateDialogOpen}>
             <AlertDialogContent>
                 <AlertDialogHeader>
